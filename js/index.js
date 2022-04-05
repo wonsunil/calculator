@@ -1,4 +1,6 @@
 const parsing = input => {
+    if(input.length === 0) return 0;
+
     const string = JSON.parse(JSON.stringify(input));
     const hasMultiplication = string.indexOf("*") >= 0 ? true : false;
     const hasDivision = string.indexOf("%") >= 0 ? true : false;
