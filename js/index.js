@@ -75,6 +75,13 @@ const $pad = $("#pad");
 let index = 0;
 
 $pad.addEventListener("click", ({ target }) => {
+    if(target.is("#execute") || target.isChildOf("#execute")) {
+        $preview.value = parsing(string);
+
+        index = 0;
+        string.length = 0;
+        $backInput.value = "0";
+    };
     if(target.is("#clear")) {
         string.length = 0;
         $backInput.value = "0";
