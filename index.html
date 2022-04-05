@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        #calculator{
+            width: 250px;
+            height: 400px;
+            display: grid;
+            grid-template-rows: 18% 80%;
+        }
+        #preview{
+            box-sizing: border-box;
+            border: 1px solid black;
+            display: flex;
+            justify-content: flex-end;
+        }
+        #preview > input{
+            width: 100%;
+            height: 100%;
+            font-size: 25px;
+            box-sizing: border-box;
+            border: none;
+            text-align: right;
+        }
+        #pad{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        #pad > div{
+            width: calc(100% / 4);
+            height: calc(100% / 6);
+            box-sizing: border-box;
+            border: 1px solid black;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+    <script src="js/prototype.js"></script>
+    <script src="js/index.js" defer></script>
+</head>
+<body>
+    <div id="calculator">
+        <div id="preview">
+            <input type="text" value="0">
+            <input type="hidden" id="back__input" value="0">
+        </div>
+        <div id="pad">
+            <div class="operator">%</div>
+            <div></div>
+            <div id="clear">C</div>
+            <div id="backspace"><img src="image/backspace_119404.svg"></div>
+            <div>()</div>
+            <div>{}</div>
+            <div>[]</div>
+            <div class="operator">%</div>
+            <div class="number">7</div>
+            <div class="number">8</div>
+            <div class="number">9</div>
+            <div class="operator">X</div>
+            <div class="number">4</div>
+            <div class="number">5</div>
+            <div class="number">6</div>
+            <div>-</div>
+            <div class="number">1</div>
+            <div class="number">2</div>
+            <div class="number">3</div>
+            <div class="operator">+</div>
+            <div></div>
+            <div class="number">0</div>
+            <div>.</div>
+            <div id="execute"><img src="image/equals_thin_icon_171799.svg"></div>
+        </div>
+    </div>
+</body>
+</html>
