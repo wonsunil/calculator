@@ -63,7 +63,6 @@ const parsing = input => {
     }
 
     if(string.length === 1) return string[0];
-
     return parsing(string);
 };
 
@@ -150,6 +149,4 @@ $pad.addEventListener("click", ({ target }) => {
 
         index++;
     };
-
-    console.log(string);
 });
