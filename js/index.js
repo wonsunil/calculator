@@ -23,9 +23,9 @@ const parsing = input => {
     });
 
     string
-    .get("*")
+    .get("X")
     .forEach(() => {
-        const index = string.indexOf("*");
+        const index = string.indexOf("X");
         string[index] = string[index - 1] * string[index + 1];
         
         string.splice(index - 1, 1);
